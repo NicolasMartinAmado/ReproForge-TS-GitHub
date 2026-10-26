@@ -1,0 +1,21 @@
+{
+  "name": "reproforge-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproducible coding task laboratory with behavioral verification and mutation checks",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "test": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test tests/*.test.ts",
+    "start": "node --disable-warning=ExperimentalWarning --experimental-strip-types src/server.ts",
+    "verify": "node --disable-warning=ExperimentalWarning --experimental-strip-types src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT"
+}
